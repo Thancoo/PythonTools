@@ -1,0 +1,10 @@
+{
+	"InjectorRootPath":[
+		"../",
+		"../../",
+		"../../Buiness/",
+		"../../Repository/",
+		"../../Services/",
+		"../../Common/"
+	]
+}
