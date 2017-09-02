@@ -1,9 +1,0 @@
-LogHelper暂时记到199的PRWechatbe库。
-
-from sys import path
-path.append('../')
-path.append('../Common')
-path.append('../Services')
-path.append('../Business')
-path.append('../Repository')
-path.append('../Entitys')
