@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>工具集</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="../../Scripts/Common/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../../Content/Component/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../Scripts/DevKit/Index.js"></script>
+    <link rel="stylesheet" href="../../Content/Component/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Content/Component/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../Content/DevKit/Index.css">
+</head>
+<body role="container container-fluid">  
+
+  <div class="panel panel-default ctr-pan-md">
+    <div class="panel-heading">Sha512 Hash</div>
+      <div class="panel-body">
+        <div>
+          <input type="text" class="form-control sha512-input fullwight" id="sha512-input" placeholder="Raw">
+        </div>
+        <div class="text-center"><button class="glyphicon glyphicon-sort ctr-btn sha512click"></button></div>
+        <div>
+          <textarea class="resultarea sha512-result fullwight" placeholder="Sha512" style="display:block;"></textarea>
+        </div>
+    </div>
+    <div class="panel-footer">
+      动态调用：{{'{{sha512("param")}}'}}<br>
+    </div>
+  </div>
+
+  <div class="panel panel-default ctr-pan-md">
+    <div class="panel-heading">
+      <h3 class="panel-title">MD5 Hash</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+          <input type="text" class="form-control MD5-input" id="MD5-input" placeholder="Raw">
+        </div>
+        <div class="text-center"><button class="glyphicon glyphicon-sort ctr-btn md5click"></button></div>
+        <div>
+          <textarea class="resultarea MD5-result fullwight" placeholder="MD5" style="display:block;"></textarea>
+        </div>
+    </div>
+    <div class="panel-footer">
+      动态调用：{{'{{md5("param")}}'}}<br>
+    </div>
+  </div>
+
+  <div class="panel panel-default ctr-pan-md">
+    <div class="panel-heading">
+      <h3 class="panel-title">Unix Timestamp</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+          <input type="text" readonly="true" class="form-control timestamp-input" id="timestamp-input" placeholder="Raw">
+        </div>
+        <div class="text-center"><button class="glyphicon glyphicon-refresh ctr-btn refreshtimestamp"></button></div>
+        <div>
+          <textarea class="resultarea fullwight remanberst" placeholder="Unix Timestamp" style="display:block;"></textarea>
+        </div>
+    </div>
+    <div class="panel-footer">
+      动态调用：{{'{{timeStamp()}}'}}<br>
+    </div>
+  </div>
+  <div class="panel panel-default ctr-pan-md">
+      <div class="panel-heading">
+        <h3 class="panel-title">Url Encode</h3>
+      </div>
+      <div class="panel-body">
+          <div>
+            <label></label>
+            <input type="text" class="form-control urlencode-input" id="Host" placeholder="Raw Url">
+          </div>
+          <div class="text-center">
+            <button class="ctr-btn glyphicon glyphicon-sort urlencodeclick" data-option="encodeurl">Encode</button>
+            <button class="ctr-btn glyphicon glyphicon-sort urlencodeclick" data-option="decodeurl">Decode</button>
+          </div>
+          <div>
+            <textarea class="resultarea urlencode-result fullwight" placeholder="Encode Result" style="display:block;"></textarea>
+          </div>
+          <div class="panel-footer">
+            动态调用：<br>
+            {{'编码：{{urlEncode("param")}}'}}<br>
+            {{'解码：{{urlDecode("param")}}'}}<br>
+          </div>
+      </div>
+  </div>
+  <div class="panel panel-default ctr-pan-lg">
+    <div class="panel-heading">
+      <h3 class="panel-title">Dynamic String Generate</h3>
+    </div>
+    <div class="panel-body">
+        <div class="dynamicParamList">
+          <label>Dynamic Param</label>
+          <div class="extparam">
+            <div class="name"><input type="text" class="form-control extparam-input-name" id="Host" placeholder="name"></div>
+            <div class="value fullwight"><input type="text" class="form-control extparam-input-value" id="Host" 
+            placeholder="value"></div>
+            <div class="option"><button class="glyphicon glyphicon-remove form-control extparam-input-remove"></button></div>
+          </div>
+          <div class="addparam-cnt"><button class="addparam ctr-btn glyphicon glyphicon-plus"></button></div>
+        </div>
+        <div><input type="text" class="template fullwight form-control" name="template" placeholder="Template" /></div>
+        <div class="text-center"><button class="ctr-btn glyphicon glyphicon-sort lexertemplate"></button></div>
+        <div>
+          <textarea class="resultarea fullwight templateresult" placeholder="Template String" style="display:block;"></textarea>
+        </div>
+    </div>
+    <div class="panel-footer">
+      <section>
+        <p>
+        动态调用：<br>这是一个例子<br>{{'http://xxxxx?UnixTime={{timeStamp}}&Token={{sha512(account+password)}}'}}
+        <br>
+        <em>timeStamp为系统提供，如要的到正确的结果，请提供account和password参数！</em>
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <div class="panel panel-default ctr-pan-md">
+    <div class="panel-heading">
+      <h3 class="panel-title">Wechat Interface Test</h3>
+    </div>
+    <div class="panel-body">
+        <div>
+          <label></label>
+          <input type="text" class="form-control xxx-input" id="Host" placeholder="Raw">
+        </div>
+        <div class="text-center"><button class="ctr-btn glyphicon glyphicon-sort"></button></div>
+        <div>
+          <textarea class="resultarea xxx-result fullwight" placeholder="Unix Timestamp" style="display:block;"></textarea>
+        </div>
+    </div>
+  </div>
+</body>
+<footer>
+  
+</footer>
