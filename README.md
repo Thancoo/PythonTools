@@ -38,5 +38,45 @@ http服务用了aiohttp，<br/>
    Repository模块：直接与数据库打交道，<br/>
    Buiness模块：用于处理业务，Model与Entity之间的转换等作用，<br/>
    MVC模块：最终输出的一层，没有逻辑，至于简单的数据操作。<br/>
-  
+ 
+ 
+description:<br/>
+This project is just an MVC framework with IoC, template engine, ORM! The
+Just write a url tool page for encryption, hash, and generate dynamic parameters with templates based on the template.<br/>
+
+The main tripartite framework used:<br/>
+The template engine uses Iinja2,<br/>
+Database driven with pymssql,<br/>
+http service with aiohttp,<br/>
+The association uses asyncio,<br/>
+
+purpose:<br/>
+Eventually I would like to transform it into a Wechat interface program + daemon.<br/>
+
+other:<br/>
+My first python project, the basic reference Liao Xuefeng Daniel's documentation (python tutorial), his documentation is very organized, the material is also very full, it is suitable for beginners to conduct a comprehensive thoroughly.<br/>
+I admire him personally, I feel that a complex knowledge of the field can choose, organized to write a high degree of readability Doc, requires a lot of knowledge, proficiency, and technical dedication.<br/>
+Of course, his document is only the role of entry and inspiration, the most important thing is to get from the official documents and technical community more specific, elegant realization.<br/>
+
+project instruction:<br/>
+This project framework I used for a long time, highly scalable, very low complexity. More suitable for medium-sized project development.<br/>
+Dependencies:
+Common: does not depend on any other modules;<br/>
+Entity: does not depend on any other module;<br/>
+Model: does not depend on any other module;<br/>
+Services: Depends on Common;<br/>
+Decorator: depends on Common;<br/>
+Repository: Depends on Entity, and Common;<br/>
+Buiness: Depends on Repository, Entity, Model, Common;<br/>
+MVC: Depends on all other modules;<br/>
+
+This item from the directory point of view -> <br/>
+Common module: a common tool class,<br/>
+Entity module: as a database object container,<br/>
+Model module: As a view of the data source, sometimes Entity field and type is not suitable for direct return to View use,<br/>
+Services module: used to deal with the external interface, depending on the Common, have their own model to communicate with the outside world,<br/>
+Decorator module: for me this layer should be assigned to the View layer is more appropriate, but because the filter is different from the Asp.Net program, Decorato can be used for all the class and function, so I extracted as a separate layer to use ,<br/>
+Repository module: deal directly with the database,<br/>
+Buiness module: used to deal with business, Model and Entity conversion between the role,<br/>
+MVC module: the final output of a layer, no logic, as for the simple data operation.<br/>
   
