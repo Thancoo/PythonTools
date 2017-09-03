@@ -54,7 +54,7 @@ purpose:<br/>
 Eventually I would like to transform it into a Wechat interface program + daemon.<br/>
 
 other:<br/>
-My first python project, the basic reference Liao Xuefeng Daniel's documentation (python tutorial), his documentation is very organized, the material is also very full, it is suitable for beginners to conduct a comprehensive thoroughly.<br/>
+My first python project, the basic reference Liao Xuefeng Daniel's documentation (<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000">python tutorial</a>), his documentation is very organized, the material is also very full, it is suitable for beginners to conduct a comprehensive thoroughly.<br/>
 I admire him personally, I feel that a complex knowledge of the field can choose, organized to write a high degree of readability Doc, requires a lot of knowledge, proficiency, and technical dedication.<br/>
 Of course, his document is only the role of entry and inspiration, the most important thing is to get from the official documents and technical community more specific, elegant realization.<br/>
 
